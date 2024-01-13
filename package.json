@@ -15,6 +15,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.490.0",
+    "aws-sdk": "^2.1535.0",
     "dotenv": "^16.3.1",
     "pino": "^8.17.2",
     "pino-pretty": "^10.3.1",
