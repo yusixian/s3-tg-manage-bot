@@ -2,12 +2,13 @@
   "name": "s3-tg-manage-bot",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/main.js",
-  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "tsc && node dist/main.js",
+    "start": "ts-node -r tsconfig-paths/register src/app.ts",
     "lint": "eslint src/**/*.ts --fix",
+    "pm2": "pm2 start ecosystem.config.js",
+    "pm2:restart": "pm2 restart ecosystem.config.js",
+    "pm2:stop": "pm2 stop ecosystem.config.js",
+    "pm2:log": "pm2 log ecosystem.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,7 +16,11 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
+    "pino": "^8.17.2",
+    "pino-pretty": "^10.3.1",
     "telegraf": "^4.15.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
