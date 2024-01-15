@@ -6,7 +6,7 @@ import { listItemAction, listItemBackAction } from './actions';
 import { generateInlineKeyboard, getParentDir } from './utils';
 
 /**
- * /listDirs [dir] - 列出该目录下所有目录，默认为顶层目录
+ * /listdirs [dir] - (admin) 列出该目录下所有目录，默认为顶层目录
  */
 const listDirsCommand = Telegraf.command('listdirs', async (ctx) => {
   const args = ctx.message.text.split(' ').slice(1);

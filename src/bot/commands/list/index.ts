@@ -5,7 +5,7 @@ import { ListObjectsV2Command } from '@aws-sdk/client-s3';
 import { Telegraf } from 'telegraf';
 
 /**
- * /list [prefix] [limit] - 列出文件，可指定前缀和限制数量
+ * /list [prefix] [limit] - (admin) 列出文件，可指定目录前缀和限制数量
  */
 const listCommand = Telegraf.command('list', async (ctx) => {
   const args = ctx.message.text.split(' ').slice(1);
